@@ -1,4 +1,6 @@
 <?php 
+
+  session_start();
   
   $usuario_autentificado = false;
 
@@ -18,19 +20,14 @@
 
    if ($usuario_autentificado) {
     echo 'Usuário Autenticado com sucesso!';
+    $_SESSION['autenticado'] = 'SIM';
+
    } else {
     header('Location: index.php?login=erro');
+    $_SESSION['autenticado'] = 'NAO';
    }
 
-  //  echo '<pre>';
-  //  print_r($_POST);
-  //  echo '</pre>';
-
-  //  echo '<br/>';
-   
-  //  echo $_POST['email'];
-  //  echo '<br/>';
-  //  echo $_POST['senha'];
+  
 
    
 ?>
