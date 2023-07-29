@@ -19,7 +19,7 @@
    }
 
    if ($usuario_autentificado) {
-    echo 'Usuário Autenticado com sucesso!';
+    header('Location: home.php');
     $_SESSION['autenticado'] = 'SIM';
 
    } else {
